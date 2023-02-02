@@ -3,7 +3,7 @@ import s from "./style.module.css";
 export function TVShowList({ tvShowList, onClickItem }) {
   return (
     <div>
-      <div className={s.title}>You may also like:</div>
+      <div className={s.title}>Vous pourriez aussi aimer:</div>
       <div className={s.list}>
         {tvShowList.map((tvShow) => {
           return (

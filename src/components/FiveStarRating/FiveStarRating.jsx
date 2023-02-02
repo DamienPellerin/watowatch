@@ -5,24 +5,24 @@ export function FiveStarRating({ rating }) {
   const starsList = [];
 
   //Nombre d'étoiles pleines
-  const starFillCount = Math.floor(rating);
+  const StarFillCount = Math.floor(rating);
 
   // Vérification si l'étoile est à moitié remplie
-  const hasStarHalf = rating - starFillCount >= 0.5;
+  const HasStarHalf = rating - StarFillCount >= 0.5;
 
   // Nombre d'étoiles vides
-  const emptyStarCount = 5 - starFillCount - (hasStarHalf ? 1 : 0);
+  const EmptyStarCount = 5 - StarFillCount - (HasStarHalf ? 1 : 0);
   // Push des étoiles pleines dans le tableau
 
-  for (let i = 0; i < starFillCount; i++) {
+  for (let i = 0; i < StarFillCount; i++) {
     starsList.push(<StarFill key={"star-fill" + i} />);
   }
 
-  if (hasStarHalf) {
-    starsList.push(<hasStarHalf key={"star-half"} />);
+  if (HasStarHalf) {
+    starsList.push(<StarHalf key={"star-half"} />);
   }
 
-  for (let i = 0; i < emptyStarCount; i++) {
+  for (let i = 0; i < EmptyStarCount; i++) {
     starsList.push(<StarEmpty key={"star-empty" + i} />);
   }
 
